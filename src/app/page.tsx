@@ -1,4 +1,6 @@
-import Link from "next/link";
+import Boton from "@/components/Boton";
+import Versiculo from "@/components/Versiculo";
+import { WA_TAMI } from "@/lib/enlaces";
 
 const palabras = [
   { letra: "C", resto: "onocer" },
@@ -21,30 +23,28 @@ export default function Home() {
             ))}
           </ul>
           <p className="mt-10 max-w-xl text-xl text-white/80">
-            Somos los adolescentes y jóvenes de la Iglesia Peniel, en Puerto
-            Vilelas, Chaco. Nos juntamos todos los sábados.
+            Somos CADE, el ministerio de adolescentes y jóvenes de Iglesia Peniel, en
+            Puerto Vilelas, Chaco, Argentina.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href="/horarios"
-              className="bg-fuego px-6 py-3 font-bold text-black hover:bg-white"
-            >
-              Ver horarios
-            </Link>
-            <Link
-              href="/sobre-nosotros"
-              className="border-2 border-white px-6 py-3 font-bold hover:bg-white hover:text-black"
-            >
-              Conocernos
-            </Link>
+            <Boton href="/encuentros">Conocer las actividades</Boton>
+            <Boton href={WA_TAMI} variante="borde">QUIERO PARTICIPAR</Boton>
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-5xl px-5 py-14">
-        <p className="max-w-2xl text-2xl font-bold leading-snug">
-          Lo que hemos visto y oído, no podemos dejar de contarlo.
+      <section className="mx-auto max-w-5xl space-y-6 px-5 py-14">
+        <p className="text-5xl font-black tracking-tighter sm:text-7xl">
+          <span className="text-fuego">10 años</span> caminando juntos
         </p>
-        <p className="mt-2 font-semibold text-impulso">Hechos 4:20</p>
+        <p className="max-w-2xl text-lg leading-relaxed">
+          Desde hace 10 años tenemos una misma visión: acercar a cada adolescente y joven a
+          Jesús, acompañándolo a vivir un encuentro personal y cara a cara con Él, que
+          transforme su vida y fortalezca su fe.
+        </p>
+        <p className="max-w-2xl text-lg">
+          Somos parte de Iglesia Peniel, bajo el pastorado de María Ester Reyes de Neznajko.
+        </p>
+        <Versiculo />
       </section>
     </>
   );

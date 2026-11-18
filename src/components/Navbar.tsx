@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
-  { href: "/sobre-nosotros", label: "Sobre nosotros" },
-  { href: "/ministerios", label: "Ministerios" },
-  { href: "/horarios", label: "Horarios" },
+  { href: "/sobre-nosotros", label: "Acerca de nosotros" },
+  { href: "/encuentros", label: "Encuentros y actividades" },
+  { href: "/horarios", label: "Horarios y ubicación" },
   { href: "/preguntas-frecuentes", label: "Preguntas frecuentes" },
   { href: "/contacto", label: "Contacto" },
 ];
